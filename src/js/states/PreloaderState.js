@@ -49,6 +49,8 @@ Winterfold.PreloaderState.prototype.preload =  function() {
     this.load.tilemap('map', 'assets/map/example_map.json', null, Phaser.Tilemap.TILED_JSON);
     this.load.spritesheet('tileset', 'assets/map/tilesheet.png', 32, 32);
     this.load.image('sprite', 'assets/sprites/sprite.png'); // this will be the sprite of the players
+
+    this.load.tilemap('map', '../assets/tilemaps/maps/testlandia.json', null, Phaser.Tilemap.TILED_JSON);
 };
 
 Winterfold.PreloaderState.prototype.create = function() {
