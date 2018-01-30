@@ -27,6 +27,13 @@ Winterfold.TitleState.prototype.preload = function() {
     // Winterfold Logo
     this.winterfoldLogo = this.add.sprite(this.world.width * 0.10, this.world.height * 0.15, 'winterfold-logo');
     this.winterfoldLogo.scale.setTo(1.5);
+
+    // New BG Test
+    this.testbg = this.add.sprite(0, 0, 'testbg');
+    this.testbg.width = window.innerWidth * window.devicePixelRatio;
+    this.testbg.height = window.innerHeight * window.devicePixelRatio;
+    this.testbg.animations.add('bganimation');
+    this.testbg.play('bganimation', 5, true);
 }
 
 Winterfold.TitleState.prototype.create = function() {
@@ -37,23 +44,23 @@ Winterfold.TitleState.prototype.create = function() {
     this.add.plugin(PhaserInput.Plugin);
 
     // Music
-    this.music = this.add.audio('divination');
+    this.music = this.add.audio('priscillas_song');
     this.music.play();
-    this.music.volume = 0.2;
+    this.music.loop = true;
     this.hoversound = this.add.audio('mmhover');
     this.hoversound.volume = 100;
     this.options = this.add.group();
     this.options.inputEnabled = true;
     
 
-    var cont = this.add.text(this.world.width * 0.10, this.world.height * 0.35, "Continue", this.style, this.options);
+    var cont = this.add.text(this.world.width * 0.20, this.world.height * 0.35, "Continue", this.style, this.options);
     cont.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
     cont.alpha = 0.3;
-    var newGame = this.add.text(this.world.width * 0.10, this.world.height * 0.40, "New", this.style, this.options);
+    var newGame = this.add.text(this.world.width * 0.20, this.world.height * 0.40, "New", this.style, this.options);
     newGame.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
-    var loadGame = this.add.text(this.world.width * 0.10, this.world.height * 0.45, "Load", this.style, this.options);
+    var loadGame = this.add.text(this.world.width * 0.20, this.world.height * 0.45, "Load", this.style, this.options);
     loadGame.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
-    var credits = this.add.text(this.world.width * 0.10, this.world.height * 0.50, "Credits", this.style, this.options);
+    var credits = this.add.text(this.world.width * 0.20, this.world.height * 0.50, "Credits", this.style, this.options);
     credits.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
 
     console.log(this.options.children);
@@ -61,48 +68,14 @@ Winterfold.TitleState.prototype.create = function() {
 
 Winterfold.TitleState.prototype.update = function() {
     var self = this;
-    this.options.children.forEach(function(option) {
+    for (let option of this.options.children) {
         option.inputEnabled = true;
-        option.events.onInputOver.add(over, self);
-        option.events.onInputOut.add(out, self);
-        option.events.onInputDown.add(down, self);
-    });
+        option.events.onInputOver.addOnce(over, self);
+        option.events.onInputOut.addOnce(out, self);
+        option.events.onInputDown.addOnce(down, self);
+    }
+    // this.options.children.forEach(function(option) {
 
-    // self.options.children.forEach(function(option) { 
-    //     Winterfold.game.time.events.add(1000, function () {
-    //         option.events.onInputOver.add(function () {
-    //             if (option._text !== 'Continue') {
-    //                 option.setText(option._text);
-    //                 option.style.fill = "#a51411";
-    //                 console.log(self.options.children[0]._text);
-    //             }
-
-    //             if (!self.isPlaying) {
-    //                 Winterfold.TitleState.hoversound.fadeIn(1000);
-    //                 this.isPlaying = true;
-    //             }
-    //         }, self);
-    //     });
-
-    //     option.events.onInputOut.add(function () {
-    //         if (option._text !== 'Continue') {
-    //             option.setText(option._text);
-    //             option.style.fill = '#fff';
-    //         }
-    //         if (self.isPlaying) {
-    //             Winterfold.TitleState.hoversound.fadeOut(1000);
-    //             self.isPlaying = false;
-    //         }
-    //     }, self);
-
-    //     Winterfold.game.time.events.add(1000, function () {
-    //         option.events.onInputDown.add(function () {
-    //             if (option._text === 'Continue') {
-    //                 self.music.destroy();
-    //                 self.game.state.start('TestState');
-    //             }
-    //         });
-    //     });
     // });
 
 };
@@ -112,14 +85,9 @@ function over(item, self) {
         item.setText(item._text);
         item.style.fill = "#a51411";
     }
-
-    this.hoversound.fadeIn(1000);
-    
-
-    // if (!self.isPlaying) {
-    //     this.hoversound.fadeIn(1000);
-    //     self.isPlaying = true;
-    // }
+    debugger;
+    console.log(self);
+    console.log(item);
 }
 
 function out(item) {
@@ -127,12 +95,6 @@ function out(item) {
         item.setText(item._text);
         item.style.fill = '#fff';
     }
-
-    this.hoversound.fadeOut(1000);
-    // if (self.isPlaying) {
-    //     Winterfold.TitleState.hoversound.fadeOut(1000);
-    //     self.isPlaying = false;
-    // }
 }
 
 function down(item) {

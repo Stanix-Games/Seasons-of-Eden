@@ -17,6 +17,8 @@ Winterfold.MovieState.prototype.preload = function() {
         video.play(true);
 
         var videoImage = video.addToWorld(this.world.centerX, this.world.centerY, 0.5, 0.5);
+        videoImage.width = window.innerWidth * window.devicePixelRatio;
+        videoImage.height = window.innerHeight * window.devicePixelRatio;
         var self = this;
         this.nextState = function() {
             self.time.events.add(1000, function() {

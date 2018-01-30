@@ -31,13 +31,17 @@ Winterfold.PreloaderState.prototype.preload =  function() {
     this.load.image('bgtest', '/assets/img/bgtest.png');
     this.load.image('grid', '/assets/img/grid.png');
     this.load.spritesheet('items', '/assets/img/items.png', 30, 30);
+    this.load.atlasJSONHash('testbg', 'assets/img/newbgpng/newbg-0.png', 'assets/img/newbgjson/newbg-0.json');
 
     //Load your sounds, efx, music...
     //Example: game.load.audio('rockas', 'assets/snd/rockas.wav');
-    this.load.audio('fireside', ['/assets/audio/fireside.mp3', 'WebContent/assets/audio/fireside.ogg']);
-    this.load.audio('socold', '/assets/audio/socold.mp3');
-    this.load.audio('divination', '/assets/audio/divination.mp3');
-    this.load.audio('mmhover', ['/assets/audio/mmhover.ogg']);
+    this.load.audio('fireside', ['/assets/audio/music/fireside.mp3', 'WebContent/assets/audio/fireside.ogg']);
+    this.load.audio('socold', '/assets/audio/music/socold.mp3');
+    this.load.audio('divination', '/assets/audio/music/divination.mp3');
+    this.load.audio('priscillas_song', '/assets/audio/music/priscillas_song.wav');
+    this.load.audio('mmhover', ['/assets/audio/music/mmhover.ogg']);
+
+    
     this.load.video('winterfold-intro', '/assets/video/winterfold.webm');
 
     //Load your data, JSON, Querys...

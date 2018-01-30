@@ -23,9 +23,9 @@ Winterfold.TestState.prototype.preload = function () {
 };
 
 Winterfold.TestState.prototype.create = function () {
-	var self = this;
-	console.log(self.world);
-	this.inv = inventory(self.game, this.world.centerX, this.world.centerY);
+	// var self = this;
+	// console.log(self.world);
+	// this.inv = inventory(self.game, this.world.centerX, this.world.centerY);
 	// app.inventory = this.inv; // This makes inventory a global variable, so that it can be used in other places of the codebase.
 
 	// // 1x2 Items
