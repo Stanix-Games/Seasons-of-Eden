@@ -1,6 +1,0 @@
-<TextureAtlas imagePath="sprites.png">
-	<SubTexture name="Brewing House Outside.png" x="0" y="1428" width="112" height="96"/>
-	<SubTexture name="Brewing House.png" x="0" y="1526" width="106" height="96"/>
-	<SubTexture name="terrain.png" x="0" y="850" width="592" height="576"/>
-	<SubTexture name="water.png" x="0" y="0" width="784" height="848"/>
-</TextureAtlas>
