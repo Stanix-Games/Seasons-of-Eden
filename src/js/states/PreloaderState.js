@@ -46,11 +46,10 @@ Winterfold.PreloaderState.prototype.preload =  function() {
 
     //Load your data, JSON, Querys...
     //Example: game.load.json('version', 'http://phaser.io/version.json');
-    this.load.tilemap('map', 'assets/map/example_map.json', null, Phaser.Tilemap.TILED_JSON);
-    this.load.spritesheet('tileset', 'assets/map/tilesheet.png', 32, 32);
+    this.load.spritesheet('tileset', 'assets/tilemaps/maps/Newtry/sprites.png', 32, 32);
     this.load.image('sprite', 'assets/sprites/sprite.png'); // this will be the sprite of the players
 
-    this.load.tilemap('map', '../assets/tilemaps/maps/testlandia.json', null, Phaser.Tilemap.TILED_JSON);
+    this.load.tilemap('map', 'assets/tilemaps/maps/Newtry/TestLandiaV2.json', null, Phaser.Tilemap.TILED_JSON);
 };
 
 Winterfold.PreloaderState.prototype.create = function() {
@@ -70,7 +69,7 @@ Winterfold.PreloaderState.prototype.create = function() {
     }, this);
 
     this.startGame = function() {
-        this.state.start('MovieState');
+        this.state.start('TestState');
     }
 }
 

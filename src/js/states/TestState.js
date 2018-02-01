@@ -38,8 +38,43 @@ Winterfold.TestState.prototype.create = function () {
 	// 	var item = new Item(this, 'items', 0, 'Test Tube', 0, 'Empty', new Phaser.Point(1, 1));
 	// 	AddItemToInventory(item);
 	// }
+
+this._loadTileMap();
 };
 
 Winterfold.TestState.prototype.update = function () {
 
+};
+
+Winterfold.TestState.prototype._loadTileMap = function() {
+
+    app.tileMap = this.game.add.tilemap('map');
+
+
+    app.tileMap.addTilesetImage('AllSpritesheets', 'tileset');
+
+    app.tileMap.layers.forEach(function(layer) {
+        var createdLayer;
+        switch (layer.name.toLowerCase()) {
+            case 'floor':
+                app.ground = app.tileMap.createLayer('floor');
+                createdLayer = app.ground;
+                break;
+            case 'collide':
+                createdLayer = app.tileMap.createLayer('Collide');
+                break;
+            case 'things':
+                // do nothing so these placeholder tiles don't appear
+                break;
+            default:
+                // Other layers are strictly visual
+                createdLayer = app.tileMap.createLayer(layer.name);
+        }
+    });
+
+    // if (!app.ground) {
+    //     throw new Error('Map load error. Required "Base" layer not found.');
+    // }
+
+    app.ground.resizeWorld(); // Sets the world size to match the size of this layer.
 };
