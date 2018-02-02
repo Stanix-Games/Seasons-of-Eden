@@ -42,4 +42,7 @@ Winterfold.BootState.prototype.create = function() {
 
     //HACK TO PRELOAD SUMIRE CUSTOM FONT
     this.add.text(0, 0, "hack", { font: "30px sumiremedium", fill: "#000" });
+
+    
 };
+
