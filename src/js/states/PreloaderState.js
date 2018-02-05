@@ -50,6 +50,8 @@ Winterfold.PreloaderState.prototype.preload =  function() {
     this.load.image('sprite', 'assets/sprites/sprite.png'); // this will be the sprite of the players
 
     this.load.tilemap('map', 'assets/tilemaps/maps/Newtry/TestLandiaV2.json', null, Phaser.Tilemap.TILED_JSON);
+
+    this.load.spritesheet('player', '/assets/sprites/diagfull_1.png');
 };
 
 Winterfold.PreloaderState.prototype.create = function() {
@@ -69,7 +71,7 @@ Winterfold.PreloaderState.prototype.create = function() {
     }, this);
 
     this.startGame = function() {
-        this.state.start('TestState');
+        this.state.start('MovieState');
     }
 }
 

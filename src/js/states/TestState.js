@@ -39,7 +39,7 @@ Winterfold.TestState.prototype.create = function () {
 	// 	AddItemToInventory(item);
 	// }
 
-this._loadTileMap();
+this._loadTileMap(); 
 };
 
 Winterfold.TestState.prototype.update = function () {
