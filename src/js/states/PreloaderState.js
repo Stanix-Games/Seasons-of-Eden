@@ -31,7 +31,8 @@ Winterfold.PreloaderState.prototype.preload =  function() {
     this.load.image('bgtest', '/assets/img/bgtest.png');
     this.load.image('grid', '/assets/img/grid.png');
     this.load.spritesheet('items', '/assets/img/items.png', 30, 30);
-    this.load.atlasJSONHash('testbg', 'assets/img/newbgpng/newbg-0.png', 'assets/img/newbgjson/newbg-0.json');
+    // this.load.atlasJSONHash('testbg', 'assets/img/newbgpng/newbg-0.png', 'assets/img/newbgjson/newbg-0.json');
+    this.load.atlasJSONHash('testbg', 'assets/img/newbgtest/testjson.png', 'assets/img/newbgtest/testjson.json');
 
     //Load your sounds, efx, music...
     //Example: game.load.audio('rockas', 'assets/snd/rockas.wav');

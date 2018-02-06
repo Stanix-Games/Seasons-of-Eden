@@ -33,7 +33,7 @@ Winterfold.TitleState.prototype.preload = function() {
     this.testbg.width = window.innerWidth * window.devicePixelRatio;
     this.testbg.height = window.innerHeight * window.devicePixelRatio;
     this.testbg.animations.add('bganimation');
-    this.testbg.play('bganimation', 5, true);
+    this.testbg.play('bganimation', 8, true);
 }
 
 Winterfold.TitleState.prototype.create = function() {
@@ -83,7 +83,7 @@ Winterfold.TitleState.prototype.update = function() {
 function over(item, self) {
     if (item._text !== 'Continue' && item._text !== undefined) {
         item.setText(item._text);
-        item.style.fill = "#a51411";
+        item.style.fill = "#f7cd52";
     }
     debugger;
     console.log(self);
