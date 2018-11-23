@@ -7,10 +7,12 @@ public class PlayerMovement : MonoBehaviour {
 	public float movementSpeed;
 	private Rigidbody2D playerRigidBody;
 	private Vector3 change;
+	private Animator playerAnimator;
 
 	// Use this for initialization
 	void Start () {
 		playerRigidBody = GetComponent<Rigidbody2D> ();
+		playerAnimator = GetComponent<Animator> ();
 	}
 
 	// Update is called once per frame
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (IsMovementChange ()) {
 			MoveCharacter ();
+			SetPlayerDirection ();
 		}
 	}
 
@@ -32,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 		change = Vector3.zero;
 	}
 	private void UpdatePlayerAxis () {
-		ResetPlayerVector();
+		ResetPlayerVector ();
 		change.x = Input.GetAxisRaw ("Horizontal");
 		change.y = Input.GetAxisRaw ("Vertical");
 	}
@@ -41,6 +44,11 @@ public class PlayerMovement : MonoBehaviour {
 		playerRigidBody.MovePosition (
 			transform.position + change * movementSpeed * Time.deltaTime
 		);
+	}
+
+	private void SetPlayerDirection () {
+		playerAnimator.SetFloat ("moveX", change.x);
+		playerAnimator.SetFloat ("moveY", change.y);
 	}
 
 	private bool IsMovementChange () {
