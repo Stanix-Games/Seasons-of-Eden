@@ -27,8 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (IsMovementChange ()) {
 			MoveCharacter ();
-			SetPlayerDirection ();
-		}
+		} else { StopPlayerMovement (); }
 	}
 
 	private void ResetPlayerVector () {
@@ -44,11 +43,18 @@ public class PlayerMovement : MonoBehaviour {
 		playerRigidBody.MovePosition (
 			transform.position + change * movementSpeed * Time.deltaTime
 		);
+
+		SetPlayerDirection ();
+	}
+
+	private void StopPlayerMovement () {
+		playerAnimator.SetBool ("moving", false);
 	}
 
 	private void SetPlayerDirection () {
 		playerAnimator.SetFloat ("moveX", change.x);
 		playerAnimator.SetFloat ("moveY", change.y);
+		playerAnimator.SetBool ("moving", true);
 	}
 
 	private bool IsMovementChange () {
