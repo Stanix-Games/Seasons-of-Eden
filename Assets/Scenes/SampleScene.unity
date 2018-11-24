@@ -180,6 +180,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7891870055901073535, guid: a33856ad6be0242aba04d2d8f7194385,
+        type: 3}
+      propertyPath: BackgroundColor.r
+      value: 0.050980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 7891870055901073535, guid: a33856ad6be0242aba04d2d8f7194385,
+        type: 3}
+      propertyPath: BackgroundColor.g
+      value: 0.047058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7891870055901073535, guid: a33856ad6be0242aba04d2d8f7194385,
+        type: 3}
+      propertyPath: BackgroundColor.b
+      value: 0.047058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437752369517894073, guid: a33856ad6be0242aba04d2d8f7194385,
+        type: 3}
+      propertyPath: Color.r
+      value: 0.050980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437752369517894073, guid: a33856ad6be0242aba04d2d8f7194385,
+        type: 3}
+      propertyPath: Color.g
+      value: 0.047058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437752369517894073, guid: a33856ad6be0242aba04d2d8f7194385,
+        type: 3}
+      propertyPath: Color.b
+      value: 0.047058824
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a33856ad6be0242aba04d2d8f7194385, type: 3}
 --- !u!1 &519420028
@@ -224,8 +254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1463097082}
   smoothing: 0.6
-  maxPosition: {x: 13.54, y: 7.36}
-  minPosition: {x: -0.94, y: -11.75}
+  maxPosition: {x: 10.35, y: 5.49}
+  minPosition: {x: 2.28, y: -9.98}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -253,7 +283,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.9367065
+  orthographic size: 4.734762
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -277,7 +307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.76, y: -6.99, z: -0.8}
+  m_LocalPosition: {x: 10.49, y: -5.84, z: -0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
