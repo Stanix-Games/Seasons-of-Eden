@@ -113,6 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &115371510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927658203674477819, guid: a33856ad6be0242aba04d2d8f7194385,
+    type: 3}
+  m_PrefabInstance: {fileID: 261253873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &261253873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -210,6 +216,21 @@ PrefabInstance:
       propertyPath: Color.b
       value: 0.047058824
       objectReference: {fileID: 0}
+    - target: {fileID: 4315036127798610612, guid: a33856ad6be0242aba04d2d8f7194385,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514483431789840154, guid: a33856ad6be0242aba04d2d8f7194385,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1497120053707851886, guid: a33856ad6be0242aba04d2d8f7194385,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a33856ad6be0242aba04d2d8f7194385, type: 3}
 --- !u!1 &519420028
@@ -254,8 +275,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1463097082}
   smoothing: 0.6
+<<<<<<< HEAD
   maxPosition: {x: 12.39, y: 6.95}
   minPosition: {x: 0.1, y: -11.28}
+=======
+  maxPosition: {x: 13.3, y: 7.16}
+  minPosition: {x: -0.76, y: -11.46}
+>>>>>>> master
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -307,12 +333,45 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.1, y: -11.28, z: -0.8}
+=======
+  m_LocalPosition: {x: -0.76, y: -11.53, z: -0.8}
+>>>>>>> master
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1299013074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1784780747538561965, guid: a33856ad6be0242aba04d2d8f7194385,
+    type: 3}
+  m_PrefabInstance: {fileID: 261253873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1299013077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299013074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: da7563cff6e470146aa9ecc0c5dc9af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldLayers:
+  - {fileID: 2086171475}
+  - {fileID: 1617760569}
+  - {fileID: 115371510}
+  realTimeToGame: 28800
+  timeUnitsInDay: 86400
+  ambientBaseLight: 0.1
+  sunAngleFrom: 20
+  sunAngleTo: 30
+  currentDayTime: 0
 --- !u!1 &1463097079
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,3 +535,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1617760569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4488231274757961252, guid: a33856ad6be0242aba04d2d8f7194385,
+    type: 3}
+  m_PrefabInstance: {fileID: 261253873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2086171475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8001991415925974254, guid: a33856ad6be0242aba04d2d8f7194385,
+    type: 3}
+  m_PrefabInstance: {fileID: 261253873}
+  m_PrefabAsset: {fileID: 0}
