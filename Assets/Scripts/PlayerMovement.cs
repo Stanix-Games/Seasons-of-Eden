@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 			MoveCharacter ();
 		} else { StopPlayerMovement (); }
 	}
+	
 
 	private void ResetPlayerVector () {
 		change = Vector3.zero;
