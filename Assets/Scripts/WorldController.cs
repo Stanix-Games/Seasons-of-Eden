@@ -33,12 +33,12 @@ public class WorldController : MonoBehaviour
     [SerializeField] private float ambientBaseLight = 0.1f;
 
     /**
-     * Angle of sun's minimun shine angle. Any angle lower than this will have 0 light from sun
+     * Angle of sun's minimun shine angle. Any angle lower than this will have 0% light from sun
      * <see cref="sunAngleTo"/>
      */
     [SerializeField] private float sunAngleFrom = 20;
     /**
-     * Angle of sun's maximum shine angle. Any angle lower than this will have 0 light from sun
+     * Angle of sun's maximum shine angle. Any angle higher than this will have 100% light from sun
      * <see cref="sunAngleFrom"/>
      */
     [SerializeField] private float sunAngleTo = 60;
