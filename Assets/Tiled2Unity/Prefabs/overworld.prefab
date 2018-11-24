@@ -100,11 +100,7 @@ Transform:
   m_Children:
   - {fileID: 3574103927800769292}
   - {fileID: 6224208182917506769}
-<<<<<<< HEAD
   m_Father: {fileID: 1856536432672427651}
-=======
-  m_Father: {fileID: 1497120053707851886}
->>>>>>> master
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7510365014680959118
@@ -352,7 +348,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 3}
   m_EdgeRadius: 0
-<<<<<<< HEAD
 --- !u!1 &912625181717504105
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,9 +380,6 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1342998430516509073
-=======
---- !u!1 &1691619909517936599
->>>>>>> master
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,11 +485,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4806727189011274152}
-<<<<<<< HEAD
   - {fileID: 1856536432672427651}
-=======
-  - {fileID: 1497120053707851886}
->>>>>>> master
   - {fileID: 2514483431789840154}
   m_Father: {fileID: 0}
   m_RootOrder: 0

@@ -5,30 +5,35 @@ using UnityEngine;
 public class RotationFollowMouse : MonoBehaviour {
 
     Camera viewCamera;
-    private float _angle;
-    Vector3 mousePos;
+    public float angle { get; private set; }
+
+    private Vector3 mouseDelta;
+    private Animator playerAnimator;
 
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
         viewCamera = Camera.main;
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update () {
-        HandlePlayerRotation();
+    void Update ()
+    {
+        UpdateAngle();
+        UpdatePlayerAnimation();
     }
 
-    private void HandlePlayerRotation() {
-        FindMousePosition();
+    private void UpdateAngle()
+    {
+        mouseDelta = viewCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        angle = Mathf.Atan2(mouseDelta.y, mouseDelta.x) * Mathf.Rad2Deg;
     }
 
-    private void FindMousePosition() {
-        mousePos = viewCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        _angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+    private void UpdatePlayerAnimation()
+    {
+        Debug.Log(mouseDelta);
+        playerAnimator.SetFloat("moveX", mouseDelta.x);
+        playerAnimator.SetFloat("moveY", mouseDelta.y);
     }
-
-    public float angle { 
-        get { return _angle; }
-    }
-
 }
