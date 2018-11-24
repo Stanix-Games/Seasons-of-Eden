@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private void HandlePlayerMovement () {
-		// ResetPlayerVector();
 		UpdatePlayerAxis ();
 
 		if (IsMovementChange ()) {
