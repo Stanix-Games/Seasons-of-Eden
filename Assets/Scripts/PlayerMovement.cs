@@ -8,16 +8,20 @@ public class PlayerMovement : MonoBehaviour {
 	private Rigidbody2D playerRigidBody;
 	private Vector3 change;
 	private Animator playerAnimator;
+	private float angle;
 
 	// Use this for initialization
 	void Start () {
 		playerRigidBody = GetComponent<Rigidbody2D> ();
 		playerAnimator = GetComponent<Animator> ();
+
 	}
 
 	// Update is called once per frame
 	void Update () {
 		HandlePlayerMovement ();
+		angle = GetComponent<RotationFollowMouse> ().angle;
+		Debug.Log (angle);
 	}
 
 	private void HandlePlayerMovement () {
@@ -27,7 +31,6 @@ public class PlayerMovement : MonoBehaviour {
 			MoveCharacter ();
 		} else { StopPlayerMovement (); }
 	}
-	
 
 	private void ResetPlayerVector () {
 		change = Vector3.zero;
