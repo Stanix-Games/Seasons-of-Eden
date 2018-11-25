@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour {
     public float viewRadius = 5;
-    public float viewAngle = 135;
+    public int viewAngle = 135;
     Collider2D[] playerInRadius;
     public LayerMask obstacleMask, playerMask;
     public List<Transform> visiblePlayer = new List<Transform> ();
@@ -33,7 +33,7 @@ public class FieldOfView : MonoBehaviour {
             }
         }
     }
-    public Vector2 DirFromAngle (float angle, bool isGlobal) {
+    public Vector2 DirFromAngle (float angle, bool isGlobal = false) {
         if (!isGlobal) {
             angle += transform.eulerAngles.z;
         }

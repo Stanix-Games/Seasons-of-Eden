@@ -17,12 +17,13 @@ public class Wisp : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        transform.position = Vector3.MoveTowards (transform.position, target.transform.position, moveSpeed * Time.deltaTime);
+        // Basically useless as wisp is child of player
+        // transform.position = Vector3.MoveTowards (transform.position, target.transform.position, moveSpeed * Time.deltaTime);
         // Vector3 vectorToTarget = target.transform.position - transform.position;
         // float angle = Mathf.Atan2 (vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
 
-        mouseDelta = viewCamera.ScreenToWorldPoint (Input.mousePosition) - transform.position;
-        angle = Mathf.Atan2 (mouseDelta.y, mouseDelta.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.AngleAxis (angle, Vector3.forward), 1000);
+        mouseDelta = viewCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        angle = Mathf.Atan2(mouseDelta.y, mouseDelta.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 }
