@@ -8,20 +8,23 @@ public class PlayerMovement : MonoBehaviour {
 	private Rigidbody2D playerRigidBody;
 	private Vector3 change;
 	private Animator playerAnimator;
-    private RotationFollowMouse playerRotator;
-    private float angle;
+	private RotationFollowMouse playerRotator;
+	private Vector2 mouseDelta;
+	private float angle;
 
 	// Use this for initialization
 	void Start () {
 		playerRigidBody = GetComponent<Rigidbody2D> ();
 		playerAnimator = GetComponent<Animator> ();
-        playerRotator = GetComponent<RotationFollowMouse>();
-    }
+		playerRotator = GetComponent<RotationFollowMouse> ();
+	}
 
 	// Update is called once per frame
 	void Update () {
-        angle = playerRotator.angle;
-        HandlePlayerMovement();
+		angle = playerRotator.angle;
+		mouseDelta = playerRotator.mouseDelta;
+		HandlePlayerMovement ();
+		UpdatePlayerAnimationBasedOnRotation ();
 	}
 
 	private void HandlePlayerMovement () {
@@ -55,6 +58,15 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void StartPlayerMovement () {
 		playerAnimator.SetBool ("moving", true);
+		playerAnimator.SetFloat ("moveX", change.x);
+		playerAnimator.SetFloat ("moveY", change.y);
+	}
+
+	private void UpdatePlayerAnimationBasedOnRotation () {
+		if (!playerAnimator.GetBool ("moving")) {
+			playerAnimator.SetFloat ("moveX", mouseDelta.x);
+			playerAnimator.SetFloat ("moveY", mouseDelta.y);
+		}
 	}
 
 	private bool IsMovementChange () {
