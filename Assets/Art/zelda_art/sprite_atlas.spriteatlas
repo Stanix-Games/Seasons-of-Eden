@@ -42,7 +42,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 4e2a5d7421a584d52bd6223be89a1375, type: 3}
-    totalSpriteSurfaceArea: 1461771
+    totalSpriteSurfaceArea: 1461787
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -1150,6 +1150,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 10084e954248146a6b05771cfb8b7537, type: 3}
   - {fileID: 21300000, guid: fa7e6ba5d1cac407d9a671fdff263244, type: 3}
   - {fileID: 21300000, guid: 8f4dc1065a59c488792c30bde224eae2, type: 3}
+  - {fileID: 21300000, guid: 026a4036efc264540ac927d9b2fe3801, type: 3}
   - {fileID: 21300000, guid: 621e9a56965b749f4930beac256aeaf3, type: 3}
   - {fileID: 21300000, guid: 302fe676391014747a8df77899a91ac3, type: 3}
   - {fileID: 21300000, guid: 2ae5cc86879b547bba5811ddfed669c3, type: 3}
@@ -2373,6 +2374,7 @@ SpriteAtlas:
   - mushroom9c
   - mushroom9a
   - NPC_test
+  - Square
   - treestump1
   - mushroom6b
   - mushroom2c
