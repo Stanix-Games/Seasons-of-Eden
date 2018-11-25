@@ -55,6 +55,7 @@ public class FOWMesh : MonoBehaviour {
                 }
                 raycastEnd = hits[j].point;
             }
+            raycastEnd.z = raycastStart.z;
 
             rays.Add(raycastStart);
             rays.Add(raycastEnd);
