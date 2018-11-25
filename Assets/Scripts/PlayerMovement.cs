@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-
 	public float movementSpeed;
 	private Rigidbody2D playerRigidBody;
 	private Vector3 change;
