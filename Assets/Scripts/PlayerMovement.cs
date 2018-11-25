@@ -14,12 +14,11 @@ public class PlayerMovement : MonoBehaviour {
 	void Start () {
 		playerRigidBody = GetComponent<Rigidbody2D> ();
 		playerAnimator = GetComponent<Animator> ();
-		mouseDelta = GetComponent<RotationFollowMouse> ().mouseDelta;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		mouseDelta = playerRotator.mouseDelta;
+		mouseDelta = GetComponent<RotationFollowMouse> ().mouseDelta;
 		HandlePlayerMovement ();
 		RotatePlayer ();
 	}
