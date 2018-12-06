@@ -33,6 +33,7 @@ public class FieldOfView : MonoBehaviour {
             }
         }
     }
+    
     public Vector2 DirFromAngle (float angle, bool isGlobal = false) {
         if (!isGlobal) {
             angle += transform.eulerAngles.z;
