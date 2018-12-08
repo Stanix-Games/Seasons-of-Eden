@@ -48,7 +48,7 @@ public static class UIScreenUtils
     [MenuItem("Assets/Create/UI Screen")]
     public static void CreateScreen()
     {
-            
+
     }
 }
 
