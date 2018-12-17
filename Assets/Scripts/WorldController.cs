@@ -8,44 +8,42 @@ public class WorldController : MonoBehaviour
 
     [SerializeField] private List<GameObject> worldLayers;
 
-
+    /// <summary>
+    /// Describes how many game-time units there are in one real-life second
+    /// </summary>
     [Header("World time")]
-
-    /**
-     * Describes how many game-time units there are in one real-life second
-     */
     [SerializeField] private float realTimeToGame = 60 * 60 * 8;
 
-    /**
-     * Describes how many game units there are in one in-game day
-     * 
-     * Defaults to 24 hours * 60 minutes * 60 seconds - basically same as real life
-     */
+    /// <summary>
+    /// Describes how many game units there are in one in-game day
+    ///  
+    /// Defaults to 24 hours * 60 minutes * 60 seconds - basically same as real life
+    /// </summary>
     [SerializeField] private float timeUnitsInDay = 24 * 60 * 60;
 
 
+    /// <summary>
+    /// Minimum light that could be ( light of moon reflections )
+    /// </summary>
     [Header("World lightning")]
-
-    /**
-     * Minimum light that could be ( light of moon reflections )
-     */
     [SerializeField] private float ambientBaseLight = 0.1f;
 
-    /**
-     * Angle of sun's minimum shine angle. Any angle lower than this will have 0% light from sun
-     * <see cref="sunAngleTo"/>
-     */
+    /// <summary>
+    /// Angle of sun's minimum shine angle. Any angle lower than this will have 0% light from sun
+    /// <see cref="sunAngleTo"/>
+    /// </summary>
     [SerializeField] private float sunAngleFrom = 20;
-    /**
-     * Angle of sun's maximum shine angle. Any angle higher than this will have 100% light from sun
-     * <see cref="sunAngleFrom"/>
-     */
+    
+    /// <summary>
+    /// Angle of sun's maximum shine angle. Any angle higher than this will have 100% light from sun
+    /// <see cref="sunAngleFrom"/>
+    /// </summary>
     [SerializeField] private float sunAngleTo = 60;
 
 
-    /**
-     * Describes how many units did pass from last day
-     */
+    /// <summary>
+    /// Describes how many units did pass from last day
+    /// </summary>
     private float currentDayTime;
 
     private List<Renderer> worldRenderers;
