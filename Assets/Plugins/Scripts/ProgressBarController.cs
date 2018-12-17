@@ -51,6 +51,6 @@ public class ProgressBarController : MonoBehaviour
 
     private void RecalculateProgress()
     {
-        Image.fillAmount = ((float) currentProgress) / maxProgress;
+        Image.fillAmount = (float) currentProgress / maxProgress;
     }
 }
