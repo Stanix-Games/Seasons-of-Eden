@@ -3,7 +3,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace StanixGames.Plugins
+namespace Plugins.StanixGames.InternalUtils
 {
     internal class EditorTextInputDialog : EditorWindow
     {
