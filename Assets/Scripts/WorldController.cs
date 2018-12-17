@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -33,7 +32,7 @@ public class WorldController : MonoBehaviour
     [SerializeField] private float ambientBaseLight = 0.1f;
 
     /**
-     * Angle of sun's minimun shine angle. Any angle lower than this will have 0% light from sun
+     * Angle of sun's minimum shine angle. Any angle lower than this will have 0% light from sun
      * <see cref="sunAngleTo"/>
      */
     [SerializeField] private float sunAngleFrom = 20;
