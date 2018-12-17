@@ -809,7 +809,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03d0a2b3bc7ad4e16b18f18ea2a24d3e, type: 3}
-<<<<<<< HEAD
 --- !u!1 &1895310204
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,8 +943,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   visiblePlayer: []
-=======
->>>>>>> e5a5eac552210f7c2184b530dc2a1f53b730359f
 --- !u!1 &1974308256
 GameObject:
   m_ObjectHideFlags: 0
